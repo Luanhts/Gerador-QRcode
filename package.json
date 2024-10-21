@@ -1,0 +1,17 @@
+{
+  "name": "gerador-qrcode",
+  "version": "1.0.0",
+  "description": "Este projeto implementa uma API RESTful para a criação e manipulação de QR Codes. A API é construída para receber dados de entrada (como URLs, textos, etc.) e devolver a imagem do QR Code correspondente, facilitando a integração em aplicações que requerem geração dinâmica de QR Codes.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^12.0.0",
+    "qr-image": "^3.2.0"
+  }
+}
