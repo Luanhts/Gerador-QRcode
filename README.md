@@ -15,8 +15,8 @@ Este projeto utiliza dois servidores: um para o frontend (Vite) e outro para o b
 Clone o repositório para sua máquina local:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/Luanhts/Gerador-QRcode.git
+cd Gerador-QRcode.git
 ```
 
 ### Passo 2: Rodar o Backend (Express)
@@ -24,7 +24,7 @@ cd seu-repositorio
 1. Navegue até o diretório do backend:
 
    ```bash
-   cd backend
+   cd Gerador-QRcode.git
    ```
 
 2. Instale as dependências:
@@ -36,7 +36,7 @@ cd seu-repositorio
 3. Inicie o servidor Express:
 
    ```bash
-   node server.js
+   node index.js
    ```
 
    O servidor backend estará rodando em `http://localhost:5000`.
@@ -46,7 +46,7 @@ cd seu-repositorio
 1. Abra um novo terminal e navegue até o diretório do frontend:
 
    ```bash
-   cd frontend
+   cd qrgenerator
    ```
 
 2. Instale as dependências:
@@ -77,7 +77,7 @@ O frontend (Vite) fará requisições HTTP para o backend (Express). Se ambos os
 
 - **CORS (Cross-Origin Resource Sharing)**: Se você encontrar um erro de CORS, certifique-se de que o backend esteja configurado corretamente para permitir requisições de outros domínios. No backend, adicione o middleware `cors` para habilitar o compartilhamento de recursos.
 
-   No seu arquivo `server.js` (backend):
+   No seu arquivo `index.js` (backend):
 
    ```javascript
    import express from 'express';
