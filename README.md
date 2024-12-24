@@ -6,7 +6,7 @@ Este é um projeto que gera QR Codes a partir de uma URL fornecida. O projeto é
 - **Frontend**: Criado com React e Vite.
 - **Backend**: Criado com Node.js e Express para gerar o QR Code.
 <div align="center">
-    <img src="https://github.com/user-attachments/assets/9d27f3f5-7e2f-4c75-bdae-b221bd7e673e" width="50" />
+    <img src="https://github.com/user-attachments/assets/9d27f3f5-7e2f-4c75-bdae-b221bd7e673e" width="200" />
 </div>
 
 ## Como rodar o projeto
