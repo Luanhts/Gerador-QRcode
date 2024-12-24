@@ -1,28 +1,22 @@
-import inquirer from "inquirer";
+import express from "express";
 import qr from "qr-image";
-import fs, { write } from "fs";
-import { error } from "console";
+import path from "path";
 
+const app = express();
 
-inquirer
-    .prompt([{
-        message: "Type your URL", 
-        name: "URL"
-    }])
-    .then((answers) => {
-        const url = answers.URL;
-        let qr_svg = qr.image(url)
-        qr_svg.pipe(fs.createWriteStream("qr_img.png"));
+const port = 5000;
 
-        fs.writeFile("URL.txt",url, (err) => {
-            if (err) throw err;
-            console.log("The file has been saved!");
-        });
-    })
-    .catch((error) => {
-        if (error.isTtyError) {
+app.use(express.json());
 
-        } else {
+app.post("/generate-qr", (req, res) => {
+  const { url } = req.body;
 
-        }
-    });
+  const qr_svg = qr.image(url, { type: "svg" });
+
+  res.setHeader("Content-Type", "image/svg+xml");
+  qr_svg.pipe(res);
+});
+
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
+});
