@@ -1,11 +1,13 @@
 import express from "express";
 import qr from "qr-image";
+import cors from "cors";
 import path from "path";
 
 const app = express();
 
 const port = 5000;
 
+app.use(cors());
 app.use(express.json());
 
 app.post("/generate-qr", (req, res) => {
